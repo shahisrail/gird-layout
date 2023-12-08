@@ -1,0 +1,87 @@
+.header ,.nav,.main,.sidebar,.adbertising,.fotter{
+    background-color: bisque;
+    border: 2px solid antiquewhite  ;
+    padding: 7px;
+    border-radius: 5px;
+}
+.header{
+    grid-area: header;
+}
+.nav{
+    grid-area: nav;
+}
+.main{
+    grid-area:main;
+}
+.sidebar{
+    grid-area: sidebar;
+}
+.adbertising{
+    grid-area: adbertising;
+}
+.fotter{
+    grid-area: fotter;
+}
+.sidebar{
+    height: 56%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.adbertising{
+    height: 56%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.container{
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    "header   header  header header"
+    "nav      main    main   sidebar" 
+    "nav      main    main   adbertising" 
+    "fotter   fotter  fotter fotter" 
+    ;
+}
+@media screen and ( max-width: 576px ) {
+    .container{
+        grid-template-areas: 
+         "header"
+         "nav"
+         "main"
+         "sidebar"
+         "adbertising"
+         "fotter    "
+        ;
+    }
+    
+}
+
+@media screen and ( min-width: 576px ) and ( max-width: 922px )  {
+    .container{
+        .sidebar{
+            height: 94%;
+            margin-top: 0px
+        }
+        .nav ,ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 230px;
+            list-style: none;
+        }
+        grid-template-areas: 
+         "header header header"
+         "nav    nav    nav"
+         "sidebar main  main"
+         "adbertising fotter fotter"
+        
+        ;
+    }
+    
+}
